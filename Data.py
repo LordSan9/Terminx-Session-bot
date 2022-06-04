@@ -24,14 +24,14 @@ class Data:
     # Rest Buttons
     buttons = [
         [InlineKeyboardButton("🌐¦اضـغـط لـبـدا استـخـراج كــود", callback_data="generate")],
-        [InlineKeyboardButton("• 𝐒𝐈𝐅 𝐂𝐎𝐁𝐑𝐀 •", url="https://t.me/QABNADLIB"),
-         InlineKeyboardButton("• قناة السورس •", url="https://t.me/VFF35") 
+        [InlineKeyboardButton("• DE⃟V EITHON •", url="https://t.me/TTTLL0"),
+         InlineKeyboardButton("• قناة السورس •", url="https://t.me/EITHON1") 
         ],
         [
             InlineKeyboardButton("❓¦طـريـقـه الاسـتـخـدام", callback_data="help"),
             InlineKeyboardButton("💾¦مـعـلومـات", callback_data="about")
       ],
-        [InlineKeyboardButton("⚙️¦الــســـورس", url="https://t.me/VFF35")],
+        [InlineKeyboardButton("⚙️¦الــســـورس", url="https://t.me/EITHON1")],
     ]
 
 
@@ -51,9 +51,9 @@ class Data:
 **💾¦مـعـلومـات** 
 ⚡¦بـوت استخـراج كـود تيرمكـس خـاص بســورس التليـثون وكــود بـايــروجـرام خـاص بـسـورس الـمـيـوزك🎶
 
-🌀¦قـنـاه الـبـوت : [⌯𝗦𝗢𝗨𝗥𝗖𝗘 𝗖𝗢𝗕𝗥𝗔⌯](https://t.me/VFF35)
+🌀¦قـنـاه الـبـوت : [⌯𝗦𝗢𝗨𝗥𝗖𝗘 Ξ𝗜𝗧𝗛𝗢𝗡™⌯](EITHON1)
 
 🌏¦اللـغــه : [بـايـثـون](www.python.org)
 
-👨🏼‍💻¦الـمـبـرمــج : @QABNADLIB
+👨🏼‍💻¦الـمـبـرمــج : @TTTLL0
     """
