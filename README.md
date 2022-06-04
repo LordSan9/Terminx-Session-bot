@@ -1,0 +1,1 @@
+# stringgg  termux
