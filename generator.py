@@ -1,4 +1,5 @@
 import Config
+import requests
 import logging
 from pyromod import listen
 from pyrogram import Client, idle
