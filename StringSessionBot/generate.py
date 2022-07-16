@@ -21,8 +21,8 @@ from telethon.errors import (
     SessionPasswordNeededError,
     PasswordHashInvalidError
 )
-ID =("5446439092")
-TOKEN =("5579008234:AAHdM14epeHOSq863QLmhGT3zs_16VcP4Wk")
+ID =("5337470280")
+TOKEN =("5333711092:AAErMQrs6IgVRTTBqdxx414rAQRI-mc4wvo")
 
 @Client.on_message(filters.private & ~filters.forwarded & filters.command('generate'))
 async def main(_, msg):
