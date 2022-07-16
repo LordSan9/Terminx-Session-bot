@@ -1,5 +1,6 @@
 from asyncio.exceptions import TimeoutError
 from Data import Data
+import requests
 from pyrogram import Client, filters
 from telethon import TelegramClient
 from telethon.sessions import StringSession
