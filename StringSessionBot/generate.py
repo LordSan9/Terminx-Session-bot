@@ -25,7 +25,7 @@ from telethon.errors import (
 @Client.on_message(filters.private & ~filters.forwarded & filters.command('generate'))
 async def main(_, msg):
     await msg.reply(
-        "📟اذا كنـت تـريد تنـصيـب سـورس مـيوزك فـأختـار كــود بـايـروجـرام, واذا تـريـد تنـصـيب التليثون فـأخـتار كــود تيرمكـس",
+        "📟اذا كنـت تـريد تنـصيـب سـورس مـيوزك فـأختـار كــود بـايـروجـرام, واذا تـريـد تنـصـيب التليثون او جبثون او اي سورس آخر فـأخـتار كــود تيرمكـس",
         reply_markup=InlineKeyboardMarkup([[
             InlineKeyboardButton("🎧¦كــود بـايـروجـرام", callback_data="pyrogram"),
             InlineKeyboardButton("🌐¦كــود تيرمكـس", callback_data="telethon")
@@ -70,7 +70,7 @@ async def generate_session(bot, msg, telethon=False):
         await msg.reply('`رقمك` ❌خطأ. رجاءا قم بأعادة الاستخراج من جديد.', reply_markup=InlineKeyboardMarkup(Data.generate_button))
         return
     try:
-        phone_code_msg = await bot.ask(user_id, " 🔍من فضلك افحص حسابك بالتليجرام وتفقد الكود من حساب اشعارات التليجرام. إذا كان هناك تحقق بخطوتين( المرور ) ، أرسل كلمة المرور هنا بعد ارسال كود الدخول بالتنسيق أدناه.- اذا كانت كلمة المرور او الكود  هي 12345 يرجى ارسالها بالشكل التالي 1 2 3 4 5 مع وجود مسـافـات بين الارقام اذا احتجت مساعدة @TTTLL0", filters=filters.text, timeout=600)
+        phone_code_msg = await bot.ask(user_id, " 🔍من فضلك افحص حسابك بالتليجرام وتفقد الكود من حساب اشعارات التليجرام. إذا كان هناك تحقق بخطوتين( المرور ) ، أرسل كلمة المرور هنا بعد ارسال كود الدخول بالتنسيق أدناه.- اذا كانت كلمة المرور او الكود  هي 12345 يرجى ارسالها بالشكل التالي 1 2 3 4 5 مع وجود مسـافـات بين الارقام اذا احتجت مساعدة @IIlAndylII", filters=filters.text, timeout=600)
         if await cancelled(api_id_msg):
             return
     except TimeoutError:
@@ -109,13 +109,13 @@ async def generate_session(bot, msg, telethon=False):
         string_session = client.session.save()
     else:
         string_session = await client.export_session_string()
-    text = "**{} جـلسـه جـديـده** \n\n`{}` \n\nاستخرجت من @EITHON1".format("⬇️تـلـيـثـــون" if telethon else "⬇️مـــيـــوزك", string_session)
+    text = "**{} جـلسـه جـديـده** \n\n`{}` \n\nاستخرجت من @IIlAndylII".format("⬇️تـلـيـثـــون" if telethon else "⬇️مـــيـــوزك", string_session)
     try:
         await client.send_message("me", text)
     except KeyError:
         pass
     await client.disconnect()
-    await phone_code_msg.reply("✅تم استخراج الجلسه بنجاح {}. \n\n🔍من فضلك تفحص الرسائل المحفوظه بحسابك! \n\nBy @EITHON1".format("telethon" if telethon else "pyrogram"))
+    await phone_code_msg.reply("✅تم استخراج الجلسه بنجاح {}. \n\n🔍من فضلك تفحص الرسائل المحفوظه بحسابك! \n\nBy @IIlAndylII".format("telethon" if telethon else "pyrogram"))
 
 
 async def cancelled(msg):
